@@ -214,7 +214,7 @@ void main() {
    * - check number of odd and number
    * as well 
    * */
-  print(marks);
+  //print(marks);
   // approach One  -> for loop
   int size = marks.length; // size of our list
   int start = 0;
@@ -240,21 +240,98 @@ void main() {
       //print("${marks[start]} is and ODD number.");
     }
     }
-  print("From our Marks list we have $evenCount EVEN number(s) and $oddCount ODD number(s)");
+  //print("From our Marks list we have $evenCount EVEN number(s) and $oddCount ODD number(s)");
  
-
+// using while loop
+  start =0;
+  int w = marks.length;
+  // condition is the start
+  //value being sero is less than the size of the array
+  while(start<w){
+    //print(marks[start]);
+    start++;
+  }
+  
+  // for..in loop
+  for (var mark in marks){
+     rem = mark% divisorTwo;
+    if (rem == 0) {
+      // add it too EvenCounts
+      evenCount++;
+      // print out is even
+      //print("$mark is and EVEN number.");
+    } else {
+      // add it to OddCOunts
+      oddCount ++ ;
+      //print out isodd
+    //  print("$mark is and ODD number.");
+    }
+  }
   /**
    * DISCRETE 
    * && , ||, ! , == 
    * truth tables 
    */
+  
+  int d =100;
+  int g = 200;
+  int p = 300;
+  int l = 400;
+  
+  // using AND logical operator
+  if((l>p) && (d>g))
+  {
+   // print("Hellow world");
+  }  else{
+    //print("Hellow Dunia");
+  }
+  //using OR logical operator
+  if((l>p) || (d>g))
+  {
+   // print("Hellow Class World");
+  }  else{
+    //print("Hellow Darasa Dunia");
+  }
 
   /**
    * FUNCTIONS (parameterized and non parameterized)
    * functionName(){}
    * functionName(var x)
    */
-
+  
+  // no  parameterized function
+   greeting(){
+     print("Good Afternoon");
+   }  
+  
+  // function to calculate the sum
+  sum()
+  {
+    // addition of values
+    int x = 10; 
+    int y = 11;
+    int sum = x +y;
+    print(sum);    
+  } 
+  //sum();
+  //  print(sum);   
+  
+  calculateSum(var x, var y){
+    //calculate sume of the two
+    var sum = x+y;
+    return sum;
+  }
+  
+  int summation = calculateSum(10,18);
+  // print(summation);
+  
+  
+  displayMarks(var myList){
+    print("MARKS ==> $myList"); 
+  }
+  
+  //displayMarks(marks);
+  
   /**
    * String conversions 
    * int.parse()
